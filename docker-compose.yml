@@ -1,8 +1,5 @@
 version: '3.1'
-networks:
-  network1:
-    name: floppanet
-    external: true
+
 services:
   launchserver:
     image: ijo42/glauncher:latest
