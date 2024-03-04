@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Floppaland super mega ultra giga cool server</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css" />
+</head>
+
+<body>
+    
+    <section class="hero is-fullheight">
+
+        <div class="hero-head">
+            <nav class="navbar ">
+                <div class="navbar-brand">
+                    <a class="navbar-item" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+                      <img src="https://cdn.discordapp.com/attachments/959163120075567147/1203001742459928636/image.png?ex=65e1f6ae&is=65cf81ae&hm=a625a13e08590ad19c08c4c4444738b2580499e865fb1ea310193be6d66346ee&" alt="Floppaland" height="320">
+                    </a>
+                <div class="container">
+                    <div id="navbarMenuHeroA" class="navbar-menu ">
+
+                        <div class="navbar-end">
+                            <a href="/" class="navbar-item">
+                                Home
+                            </a>
+                            <a href="/skin" class="navbar-item">
+                                Change Skin
+                            </a>
+                            <a href="/register" class="navbar-item">
+                                Sign Up
+                            </a>
+                            <div class="navbar-item has-dropdown is-hoverable is-primary">
+                                <a class="navbar-link">
+                                    Download
+                                  </a>
+                                <div class="navbar-dropdown is-boxed">
+                                    <a href="launcher.floppaland.fun/Launcher.exe" class="navbar-item">
+                                        EXE
+                                    </a>
+                                    
+                                    <a href="launcher.floppaland.fun/Launcher.jar" class="navbar-item">
+                                        Universal
+                                    </a>
+                                </div>
+                            </div>
+                            
+
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        
+        <div class="hero-body">
+            <div class="background"></div>
+            <style>
+                .background {
+                    position: fixed;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: -1;
+                    background-image: url('https://acmi-website-media-prod.s3.ap-southeast-2.amazonaws.com/media/images/landscape-minecraft-shaders-river-wallpaper.original.jpg'); 
+                    filter: blur(8px); 
+                    height: 100%; 
+                    background-position: center; 
+                    background-repeat: no-repeat; 
+                    background-size: cover;
+                }
+                
+                </style> 
+            <div class="container has-text-centered">
+               {% block content %}
+               {% endblock %}
+            </div>
+            
+        </div>
+    </section>
+</body>
+
+</html>

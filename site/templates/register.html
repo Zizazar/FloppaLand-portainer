@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="column is-4 is-offset-4">
+
+    <div class="box">
+    <h1 class="title">Регистрация</h1>
+        <form method="POST" action="/register">
+
+            <div class="field">
+                <div class="control">
+                    <input class="input is-large" type="text" name="username" placeholder="Ник" autofocus="">
+                </div>
+            </div>
+
+            <div class="field">
+                <div class="control">
+                    <input class="input is-large" type="password" name="password" placeholder="Пароль">
+                </div>
+            </div>
+
+            <button class="button is-block is-info is-large is-fullwidth">Зарегатся</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
