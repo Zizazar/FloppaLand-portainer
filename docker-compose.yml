@@ -61,22 +61,22 @@ services:
     depends_on:
       - db
 
-  nginx:
-    image: nginx
-    volumes:
-    - /home/server/:/var/www/app/public/
-    - /home/server/nginx/nginx.conf:/etc/nginx/conf.d/default.conf
-    ports:
-    - "80:80"
-    environment:
-    - NGINX_HOST=floppaland.com
-    - NGINX_PORT=80 
-    depends_on:
-      flask_web:
-        condition: service_started
-      adminer:
-        condition: service_started
-      launchserver:
-        condition: service_started
-      kubek:
-        condition: service_started
+#  nginx:
+#    image: nginx
+#    volumes:
+#    - /home/server/:/var/www/app/public/
+#    - /home/server/nginx/nginx.conf:/etc/nginx/conf.d/default.conf
+#    ports:
+#    - "80:80"
+#    environment:
+#    - NGINX_HOST=floppaland.com
+#    - NGINX_PORT=80 
+#    depends_on:
+#      flask_web:
+#        condition: service_started
+#      adminer:
+#        condition: service_started
+#      launchserver:
+#        condition: service_started
+#      kubek:
+#        condition: service_started
