@@ -1,4 +1,10 @@
-version: '3.1'
+version: '3.5'
+
+networks:
+  floppaland-net:
+    external:
+      name: main-net
+
 services:
   launchserver:
     image: ijo42/glauncher:latest
