@@ -20,6 +20,8 @@ services:
       - TZ=Europe/Moscow # Timezone
       - PUID=1000  # User  ID `id $(whoami) -u`
       - PGID=1000  # Group ID `id $(whoami) -g`
+    networks:
+      - floppaland-net
 
   kubek:
     image: seeroy/kubek-minecraft-dashboard
@@ -30,9 +32,12 @@ services:
     volumes:
       - /home/server/kubek-servs:/usr/kubek/servers
       #- .kubek-servs/config.json:/usr/kubek/config.json
+    networks:
+      - floppaland-net
     depends_on:
       launchserver:
         condition: service_started
+    
 
   db:
     image: postgres
@@ -51,7 +56,9 @@ services:
       POSTGRES_PASSWORD: example
     volumes:
       - /home/server/postgres-data:/var/lib/postgresql/data
-
+    networks:
+      - floppaland-net
+      
   adminer:
     image: adminer
     restart: always
@@ -63,7 +70,9 @@ services:
     ports:
       - 5000:5000
     volumes:
-    - /home/server/site/:/app
+      - /home/server/site/:/app
+    networks:
+      - floppaland-net
     depends_on:
       - db
 
