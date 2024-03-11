@@ -28,6 +28,7 @@ services:
     restart: always
     ports:
       - 3000:3000
+      - 8123:8123
       - 25565:25565
     volumes:
       - /home/server/kubek-servs:/usr/kubek/servers
