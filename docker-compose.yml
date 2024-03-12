@@ -29,6 +29,7 @@ services:
     ports:
       - 3000:3000
       - 8123:8123
+		    - 24454:24454/udp
       - 25565:25565
     volumes:
       - /home/server/kubek-servs:/usr/kubek/servers
