@@ -22,7 +22,7 @@ services:
       - PGID=1000  # Group ID `id $(whoami) -g`
     networks:
       - floppaland-net
-				healthcheck:
+    healthcheck:
         test: ["CMD", "curl", "-f", "http://launchserver:9274"]
         interval: 30s
         timeout: 10s
