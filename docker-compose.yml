@@ -15,7 +15,7 @@ services:
     ports:
       - 9274:9274
     volumes:
-      - /home/server/launcher:/app/launchserver
+      - ${MAIN_DIR}/launcher:/app/launchserver
     environment:
       - TZ=Europe/Moscow # Timezone
       - PUID=1000  # User  ID `id $(whoami) -u`
@@ -37,9 +37,9 @@ services:
       - 24454:24454/udp
       - 25565:25565
     volumes:
-      - /home/server/kubek-servs:/usr/kubek/servers
-      - /home/server/kubek/java:/usr/kubek/binaries/java/
-      - /home/server/kubek/config.json:/usr/kubek/config.json
+      - ${MAIN_DIR}/kubek-servs:/usr/kubek/servers
+      - ${MAIN_DIR}/kubek/java:/usr/kubek/binaries/java/
+      - ${MAIN_DIR}/kubek/config.json:/usr/kubek/config.json
     networks:
       - floppaland-net
     depends_on:
@@ -63,7 +63,7 @@ services:
     environment:
       POSTGRES_PASSWORD: example
     volumes:
-      - /home/server/postgres-data:/var/lib/postgresql/data
+      - ${MAIN_DIR}/postgres-data:/var/lib/postgresql/data
     networks:
       - floppaland-net
       
@@ -80,7 +80,7 @@ services:
     ports:
       - 5000:5000
     volumes:
-      - /home/server/site/:/app
+      - ${MAIN_DIR}/site/:/app
     networks:
       - floppaland-net
     depends_on:
